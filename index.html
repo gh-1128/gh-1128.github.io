@@ -21,7 +21,7 @@
 </style>
 
 <body>
-    <audio id='vd' autoplay="autoplay">
+    <audio controls='controls' id='vd' autoplay="autoplay">
         <source src="111.mp3" type="audio/mpeg" />
     </audio>
 
@@ -29,22 +29,20 @@
     <div id=app "></div>
 
 
-    <script>
 
-function audioAutoPlay(id){
+    <script>
+        WxShare({
+            title: '听说今年平安夜的礼物是漂流瓶？',
+            desc: '圣诞老人来过吗？打开床头袜看看～',
+            link: 'http://www.linmutech.com/h5/kg/index.html',
+            // imgUrl: 'http://www.linmutech.com/h5/kg/logo.png',
+        })
+
+        function audioAutoPlay(id){
     var audio = document.getElementById(id);
-    console.log(11111111);
+
     audio.play();
     document.addEventListener(" WeixinJSBridgeReady", function () { console.log(111111222); audio.play(); }, false); }
-        audioAutoPlay('vd'); </script> <script>
-        WxShare({
-        title: '听说今年平安夜的礼物是漂流瓶？',
-        desc: '圣诞老人来过吗？打开床头袜看看～',
-        link: 'http://www.linmutech.com/h5/kg/index.html',
-        // imgUrl: 'http://www.linmutech.com/h5/kg/logo.png',
-
-        })
-        </script>
-        <script type=text/javascript src=./static/js/manifest.3ad1d5771e9b13dbdad2.js> </script> <script
-            type=text/javascript src=./static/js/vendor.226723a0f0b84b576d98.js> </script> <script type=text/javascript
-            src=./static/js/app.f2997cea9580010c3db1.js> </script> </body> </html>
+        audioAutoPlay('vd'); </script> <script type=text/javascript src=./static/js/manifest.3ad1d5771e9b13dbdad2.js>
+        </script> <script type=text/javascript src=./static/js/vendor.226723a0f0b84b576d98.js> </script> <script
+        type=text/javascript src=./static/js/app.f2997cea9580010c3db1.js> </script> </body> </html>
