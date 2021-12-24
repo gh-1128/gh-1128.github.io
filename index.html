@@ -11,15 +11,32 @@
         src=./static/js/wxShare(1).js> </script> <link href=./static/css/app.fc6430a730f5e01df22c1d55853f29a4.css
         rel=stylesheet>
 </head>
+<style>
+    body,
+    html,
+    #app {
+        width: 100%;
+        height: 100%;
+    }
+</style>
 
 <body>
     <audio controls='controls' id='vd' autoplay="autoplay">
         <source src="111.mp3" type="audio/mpeg" />
     </audio>
 
+
+    <div id=app onclick="fun"></div>
+
     <script type="text/javascript">
-        window.onload = function () {
+
+        $(document).ready(function () {
             setInterval("toggleSound()", 100);
+            console.log(111111);
+        });
+
+        function fun() {
+            console.log(111111);
         }
 
         function toggleSound() {
@@ -31,7 +48,6 @@
             }
         }
     </script>
-    <div id=app></div>
     <script>
         WxShare({
             title: '听说今年平安夜的礼物是漂流瓶？',
