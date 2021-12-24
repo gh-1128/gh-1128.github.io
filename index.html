@@ -26,21 +26,19 @@
     </audio>
 
 
-    <div id=app onclick="fun()"></div>
+    <div id=app "></div>
 
     <script type="text/javascript">
-        $(document).ready(function () {
-            setInterval("toggleSound()", 100);
-            console.log(111111);
-        });
+        // $(document).ready(function () {
+        //     setInterval("toggleSound()", 100);
+        //     console.log(111111);
+        //     console.log( document.querySelector('.music'));
+        //     document.querySelector('.music').onclick = function tet(){
+        //         console.log(111111);
+        //     }
+        // });
 
-        window.onclick = function fun() {
-            var music = document.getElementById("vd"); //获取ID  
-            if (music.paused) { //判读是否播放  
-                music.paused = false;
-                music.play(); //没有就播放 
-            }
-        }
+
         function toggleSound() {
             var music = document.getElementById("vd"); //获取ID  
             if (music.paused) { //判读是否播放  
@@ -48,6 +46,19 @@
                 music.play(); //没有就播放 
             }
         }
+    </script>
+    <script>
+
+function audioAutoPlay(id){
+    var audio = document.getElementById(id);
+    console.log(11111111);
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        console.log(111111222);
+            audio.play();
+    }, false);
+}
+audioAutoPlay('vd');
     </script>
     <script>
         WxShare({

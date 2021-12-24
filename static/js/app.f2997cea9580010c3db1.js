@@ -231,6 +231,10 @@ webpackJsonp([1], {
           },
           girl: function () {
             this.imgUrl = "./static/sex/男女选择按钮（女）.png", this.sex = "0"
+          },
+          musicBn: function () {
+
+            console.log(111);
           }
         }
       },
@@ -1048,7 +1052,7 @@ webpackJsonp([1], {
             msg8: "唱首歌给我听",
             msg9: "陪我开黑",
             msg10: "陪我聊一小时",
-   
+
             msg12: "陪我看一场电影",
             msg13: "陪我吃一顿饭",
             msg14: "做我男朋友"
@@ -1455,7 +1459,10 @@ webpackJsonp([1], {
           return s("div", {
             staticClass: "top"
           }, [s("div", [s("div", {
-            staticClass: "music"
+            staticClass: "music",
+            on: {
+              click: t.musicBn
+            }
           })]), this._v(" "), s("div", {
             staticClass: "logo"
           }, [s("img", {
