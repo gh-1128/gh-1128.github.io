@@ -26,17 +26,21 @@
     </audio>
 
 
-    <div id=app onclick="fun"></div>
+    <div id=app onclick="fun()"></div>
 
     <script type="text/javascript">
-
         $(document).ready(function () {
             setInterval("toggleSound()", 100);
             console.log(111111);
         });
 
-        function fun() {
-            console.log(111111);
+        window.onclick = function fun() {
+            var music = document.getElementById("vd"); //获取ID  
+
+            if (music.paused) { //判读是否播放  
+                music.paused = false;
+                music.play(); //没有就播放 
+            }
         }
 
         function toggleSound() {
